@@ -14,5 +14,8 @@ django.setup()
 if __name__ == '__main__':
 
     from snippets.models import Snippet
-    snip = Snippet()
-    print(snip)
+    snippet = Snippet(code='foo = "bar"\n')
+    snippet.save()
+
+    snippet = Snippet(code='print("hello, world")\n')
+    snippet.save()
